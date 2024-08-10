@@ -104,7 +104,7 @@ $japanese_realm_array = array("Alexander","Bahamut","Durandal","Fenrir","Ifrit",
 sort($japanese_realm_array);
 
 $european_realm_array = array("Cerberus","Lich","Moogle","Odin","Phoenix","Ragnarok","Shiva","Zodiark","Louisoix","Omega",
-                              "Spriggan","Twintania", "Sagittarius", "Phantom", "Alpha", "Raiden", "Innocence", "Pixie", "Titania", "Tycoon");
+                              "Spriggan","Twintania", "Sagittarius", "Phantom", "Alpha", "Raiden");
 sort($european_realm_array);
 
 $oceanian_realm_array = array("Bismarck", "Ravana", "Sephirot", "Sophia", "Zurvan");
