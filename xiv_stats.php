@@ -229,6 +229,8 @@ $pvp_s3l15_reward = 0;
 $pvp_s4l15_reward = 0;
 $pvp_s4l25_reward = 0;
 $pvp_s5l15_reward = 0;
+$pvp_s6l15_reward = 0;
+$pvp_s6l25_reward = 0;
 
 // Anniversary Events
 $ninth_anniversary = 0;
@@ -502,6 +504,12 @@ while($row = $player_overview_query->fetch_assoc()) {
             // Series 5 - Level 15 Reward
             $pvp_s5l15_reward += in_array("Tourmaline Weapon", $minions) ? 1 : 0;
             $fmt_pvp_s5l15_reward = number_format($pvp_s5l15_reward);
+            // Series 6 - Level 15 Reward
+            $pvp_s6l15_reward += in_array("Squeak the Coyote", $minions) ? 1 : 0;
+            $fmt_pvp_s6l15_reward = number_format($pvp_s6l15_reward);
+            // Series 6 - Level 25 Reward
+            $pvp_s6l25_reward += in_array("Oppressor", $mounts) ? 1 : 0;
+            $fmt_pvp_s6l25_reward = number_format($pvp_s6l25_reward);
 
     // Anniversary Events
     $ninth_anniversary += in_array("Clockwork Solus", $minions) ? 1 : 0;
@@ -1651,11 +1659,25 @@ $db->close();
                                 <?php echo $fmt_pvp_s4l25_reward; ?>
                             </span>
                         </div>
-                        <div class="col s12 m12 l12 light region-subtitle">
+                        <div class="col s12 m4 l4 light region-subtitle">
                             <p><a href="https://eu.finalfantasyxiv.com/lodestone/playguide/db/item/d1365de3a3f/"
                                     class="eorzeadb_link">REACH LV 15 IN SERIES 5 OF PVP</a></p>
                             <span class="region-stat">
                                 <?php echo $fmt_pvp_s5l15_reward; ?>
+                            </span>
+                        </div>
+                        <div class="col s12 m4 l4 light region-subtitle">
+                            <p><a href="https://eu.finalfantasyxiv.com/lodestone/playguide/db/item/2cd12b2451b/"
+                                    class="eorzeadb_link">REACH LV 15 IN SERIES 6 OF PVP</a></p>
+                            <span class="region-stat">
+                                <?php echo $fmt_pvp_s6l15_reward; ?>
+                            </span>
+                        </div>
+                        <div class="col s12 m4 l4 light region-subtitle">
+                            <p><a href="https://eu.finalfantasyxiv.com/lodestone/playguide/db/item/2cd12b2451b/"
+                                    class="eorzeadb_link">REACH LV 25 IN SERIES 6 OF PVP</a></p>
+                            <span class="region-stat">
+                                <?php echo $fmt_pvp_s6l25_reward; ?>
                             </span>
                         </div>
                     </div>
